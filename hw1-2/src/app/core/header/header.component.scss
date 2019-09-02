@@ -1,0 +1,23 @@
+.header-wrapper {
+  align-items: center;
+  border-bottom: 1px solid gray;
+  .logo{
+    display: flex;
+    align-items: center;
+    i {
+      font-size: 50px;
+    }
+    a {
+      text-decoration: none;
+      font-size: 30px;
+    }
+  }
+  .buttons {
+    button {
+      font-size: 16px;
+      margin-left: 10px;
+      background: transparent;
+      border: none;
+    }
+  }
+}

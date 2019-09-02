@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+  height: 100%;
+}
+body {
+  margin: 10px;
+  font-family: Roboto, "Helvetica Neue", cursive;
+  app-root {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+.p-15 {
+  padding: 15px;
+}
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+.m-left-15 {
+  margin-left: 15px;
+}
+.m-15 {
+  margin: 15px;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  min-width: 100px;
+  background: transparent;
+}
