@@ -3,6 +3,7 @@ import { Course } from '../classes/course';
 
 @Injectable()
 export class DataService{
+  public moreItems : number = 3;
   public data : any = [{
         id: 1,
         title: 'Video Course 1',
@@ -27,12 +28,39 @@ export class DataService{
         creationDate: "1.01.2001",
         duration: "40min",
         description: "Lorem ipsum dolor sit. Dignissimos impedit voluptatem quaerat quam odio accusantium ipsam facilis beatae cumque molestias odit vel adipisci tenetur quia pariatur, temporibus aperiam optio! Consequuntur quo, vel minus asperiores quidem totam perspiciatis magnam fugit?"
+      },{
+        id: 5,
+        title: 'Video Course 5',
+        creationDate: "1.01.2001",
+        duration: "40min",
+        description: "Lorem ipsum dolor sit. Dignissimos impedit voluptatem quaerat quam odio accusantium ipsam facilis beatae cumque molestias odit vel adipisci tenetur quia pariatur, temporibus aperiam optio! Consequuntur quo, vel minus asperiores quidem totam perspiciatis magnam fugit?"
+      },{
+        id: 6,
+        title: 'Video Course 6',
+        creationDate: "1.01.2001",
+        duration: "40min",
+        description: "Lorem ipsum dolor sit. Dignissimos impedit voluptatem quaerat quam odio accusantium ipsam facilis beatae cumque molestias odit vel adipisci tenetur quia pariatur, temporibus aperiam optio! Consequuntur quo, vel minus asperiores quidem totam perspiciatis magnam fugit?"
+      },{
+        id: 7,
+        title: 'Video Course 7',
+        creationDate: "1.01.2001",
+        duration: "40min",
+        description: "Lorem ipsum dolor sit. Dignissimos impedit voluptatem quaerat quam odio accusantium ipsam facilis beatae cumque molestias odit vel adipisci tenetur quia pariatur, temporibus aperiam optio! Consequuntur quo, vel minus asperiores quidem totam perspiciatis magnam fugit?"
       }
     ]
 
   constructor(){}
-  public getData() : any {
-    console.log(this.data)
-    return this.data;
+  public moreData(end:number): Course {
+    this.moreItems = +this.moreItems;
+    
+    return this.data.filter(function(e) {
+      console.log(e)
+      return e.id <= end;
+    })
   }
+   items = function getData() : any {
+    //console.log(this.data)
+    return this.moreData(this.moreItems);
+  }
+  
 }

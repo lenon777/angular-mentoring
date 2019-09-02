@@ -1,8 +1,11 @@
-<div  *ngFor="let i of data" class="plate-wrapper space-between">
+<div  *ngFor="let i of data" class="plate-wrapper space-between p-15 m-15">
   <div>
-    <div>
-      <h3></h3>
-      <div></div>
+    <div class="space-between">
+      <h3>{{i.title}}</h3>
+      <div class="space-between">
+        <p>{{i.duration}}</p>
+        <p class="m-left-15">{{i.creationDate}}</p>
+      </div>
     </div>
     <p>{{i.description}}</p>
   </div>
