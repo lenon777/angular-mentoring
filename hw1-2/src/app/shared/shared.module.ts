@@ -5,12 +5,14 @@ import { SearchControlComponent } from './main/search-control/search-control.com
 import { AddCourseComponent } from './main/add-course/add-course.component';
 import { VideoCoursePlateComponent } from './main/video-course-plate/video-course-plate.component';
 import { LoadMoreComponent } from './main/load-more/load-more.component';
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   exports: [MainComponent],
   declarations: [MainComponent, SearchControlComponent, AddCourseComponent, VideoCoursePlateComponent, LoadMoreComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ]
 })
 export class SharedModule {

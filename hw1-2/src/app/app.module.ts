@@ -7,6 +7,8 @@ import { CoreModule } from './core/core.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { DataService } from './services/data.service';
+import {FormsModule} from '@angular/forms';
+
 
 
 @NgModule({
@@ -18,7 +20,8 @@ import { DataService } from './services/data.service';
     AppRoutingModule,
     SharedModule.forRoot(),
     CoreModule.forRoot(),
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    FormsModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

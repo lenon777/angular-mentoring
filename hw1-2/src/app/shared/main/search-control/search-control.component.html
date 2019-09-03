@@ -1,4 +1,4 @@
 <div>
-  <input type="text" placeholder="Text to search">
-  <button class="m-left-15">Search</button>
+  <input [(ngModel)]="searchValue" #inputField type="text" placeholder="Text to search">
+  <button (click)="submit(inputField.value)" class="m-left-15">Search</button>
 </div>
