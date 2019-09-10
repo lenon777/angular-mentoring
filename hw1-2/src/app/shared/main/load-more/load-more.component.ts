@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {DataService} from '../../../services/data.service'
+import { DataService } from '../../../services/data.service'
 
 
 
@@ -11,12 +11,12 @@ import {DataService} from '../../../services/data.service'
 })
 export class LoadMoreComponent implements OnInit {
 
-  constructor(public data:DataService) { 
+  constructor() {
   }
-  
-public loadMore(): void{
-  //this.data.getData();
-}
+
+  public loadMore(): void {
+
+  }
   ngOnInit() {
   }
 

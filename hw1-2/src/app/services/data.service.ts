@@ -3,7 +3,6 @@ import { Course } from '../classes/course';
 
 @Injectable()
 export class DataService{
-  public moreItems : number = 3;
   public data : any = [{
         id: 1,
         title: 'Video Course 1',
@@ -50,17 +49,6 @@ export class DataService{
     ]
 
   constructor(){}
-  public moreData(end:number): Course {
-    this.moreItems = +this.moreItems;
-    
-    return this.data.filter(function(e) {
-      console.log(e)
-      return e.id <= end;
-    })
-  }
-   items = function getData() : any {
-    //console.log(this.data)
-    return this.moreData(this.moreItems);
-  }
-  
+
+
 }

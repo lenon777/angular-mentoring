@@ -10,7 +10,7 @@ import { DataService } from 'src/app/services/data.service';
 export class VideoCoursePlateComponent implements OnInit {
 
   constructor(private dataService: DataService) { }
-  public data = this.dataService.items();
+  public data = this.dataService.data;
 
   public changeData() : void {
 
