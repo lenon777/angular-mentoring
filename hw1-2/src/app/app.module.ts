@@ -5,21 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { SharedModule } from './shared/shared.module';
-import { DataService } from './services/data.service';
+import { DataService } from './core/services/data.service';
 import {FormsModule} from '@angular/forms';
+import { MainModule } from './shared/main/main.module';
+
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule.forRoot(),
     CoreModule.forRoot(),
+    MainModule,
     NoopAnimationsModule,
     FormsModule
   ],
