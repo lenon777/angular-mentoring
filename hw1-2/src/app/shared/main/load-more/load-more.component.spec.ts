@@ -18,6 +18,13 @@ describe('LoadMoreComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
+  // it('should', async(() =>{
+  //   let button = fixture.debugElement.nativeElement.querySelector('button');
+  //   spyOn(component,button);
+  //   fixture.whenStable().then(() => {
+  //     expect(component.loadMore).toHaveBeenCalled();
+  //   });
+  // }))
 
   it('should create', () => {
     expect(component).toBeTruthy();

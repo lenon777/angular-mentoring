@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, EventEmitter, Output } from '@angular/core';
 import { DataService } from 'src/app/core/services/data.service';
 
 @Component({
@@ -8,11 +8,16 @@ import { DataService } from 'src/app/core/services/data.service';
   styleUrls: ['./video-course-plate.component.scss']
 })
 export class VideoCoursePlateComponent implements OnInit {
+  @Output() public myOutput = new EventEmitter();
 
   constructor(private dataService: DataService) { }
   public data = this.dataService.data;
 
-  public changeData() : void {
+  deleteCourse(curerenCourse) {
+    this.myOutput.emit(curerenCourse)
+  }
+
+  public changeData(): void {
 
   }
 

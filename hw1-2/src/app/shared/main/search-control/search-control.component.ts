@@ -12,9 +12,18 @@ export class SearchControlComponent implements OnInit {
   public submit(value): void {
     console.log(value);
     this.searchValue = "";
+    this.sum(1,2);
   }
 
   ngOnInit() {
   }
 
+
+  sum(a: number, b: number): number {
+    return a + b;
+  }
+  
+  containString(value: string): string {
+    return value;
+  }
 }

@@ -4,7 +4,7 @@
     <app-add-course></app-add-course>
   </div>
   <div>
-    <app-video-course-plate></app-video-course-plate>
+    <app-video-course-plate (myOutput)="valueFromChild($event)"></app-video-course-plate>
     <app-load-more></app-load-more>
   </div>
 </div>

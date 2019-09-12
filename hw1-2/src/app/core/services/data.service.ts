@@ -11,7 +11,13 @@ export class DataService {
   public course5 = new Course(5, 'Video Course 5', "1.01.2001", "40min", "Lorem ipsum dolor sit. Dignissimos impedit voluptatem quaerat quam odio accusantium ipsam facilis beatae cumque molestias odit vel adipisci tenetur quia pariatur, temporibus aperiam optio! Consequuntur quo, vel minus asperiores quidem totam perspiciatis magnam fugit?");
   public course6 = new Course(6, 'Video Course 6', "1.01.2001", "40min", "Lorem ipsum dolor sit. Dignissimos impedit voluptatem quaerat quam odio accusantium ipsam facilis beatae cumque molestias odit vel adipisci tenetur quia pariatur, temporibus aperiam optio! Consequuntur quo, vel minus asperiores quidem totam perspiciatis magnam fugit?");
   public course7 = new Course(7, 'Video Course 7', "1.01.2001", "40min", "Lorem ipsum dolor sit. Dignissimos impedit voluptatem quaerat quam odio accusantium ipsam facilis beatae cumque molestias odit vel adipisci tenetur quia pariatur, temporibus aperiam optio! Consequuntur quo, vel minus asperiores quidem totam perspiciatis magnam fugit?");
-  public data: any = [this.course1, this.course2, this.course3, this.course4, this.course5, this.course6, this.course7]
+  public data: any = [this.course1, this.course2, this.course3, this.course4, this.course5, this.course6, this.course7];
+
+  deleteCourse(courseId) {
+    this.data = this.data.filter((el) => {
+      return el.id !== courseId;
+    })
+  }
 
   constructor() { }
 

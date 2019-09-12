@@ -15,7 +15,7 @@ export class LoadMoreComponent implements OnInit {
   }
 
   public loadMore(): void {
-
+    console.log('it works!!!')
   }
   ngOnInit() {
   }
