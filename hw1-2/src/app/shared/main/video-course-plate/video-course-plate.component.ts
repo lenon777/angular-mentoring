@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, ViewChild, EventEmitter, Output, ElementRef } from '@angular/core';
 import { DataService } from 'src/app/core/services/data.service';
 
 @Component({
@@ -14,7 +14,8 @@ export class VideoCoursePlateComponent implements OnInit {
   public data = this.dataService.data;
 
   deleteCourse(curerenCourse) {
-    this.myOutput.emit(curerenCourse)
+    this.myOutput.emit(curerenCourse);
+    this.data = this.data.filter((el) => el.id !== curerenCourse.id);
   }
 
   public changeData(): void {
