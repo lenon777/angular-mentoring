@@ -8,6 +8,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { DataService } from './core/services/data.service';
 import {FormsModule} from '@angular/forms';
 import { MainModule } from './shared/main/main.module';
+import { DurationPipe } from './utils/duration.pipe';
 
 
 
@@ -15,6 +16,7 @@ import { MainModule } from './shared/main/main.module';
 @NgModule({
   declarations: [
     AppComponent,
+    //DurationPipe
   ],
   imports: [
     BrowserModule,

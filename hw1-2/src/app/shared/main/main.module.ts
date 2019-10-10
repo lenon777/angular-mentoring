@@ -8,6 +8,7 @@ import { MainComponent } from './main.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { DurationPipe } from 'src/app/utils/duration.pipe';
 
 @NgModule({
     declarations: [
@@ -15,7 +16,8 @@ import { BrowserModule } from '@angular/platform-browser';
         AddCourseComponent,
         LoadMoreComponent,
         SearchControlComponent,
-        VideoCoursePlateComponent
+        VideoCoursePlateComponent,
+        DurationPipe
     ],
     imports: [
         CommonModule,
