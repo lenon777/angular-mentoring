@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { DurationPipe } from 'src/app/utils/duration.pipe';
+import { OrderByPipe } from 'src/app/utils/order-by.pipe';
 
 @NgModule({
     declarations: [
@@ -17,7 +18,8 @@ import { DurationPipe } from 'src/app/utils/duration.pipe';
         LoadMoreComponent,
         SearchControlComponent,
         VideoCoursePlateComponent,
-        DurationPipe
+        DurationPipe,
+        OrderByPipe
     ],
     imports: [
         CommonModule,

@@ -6,7 +6,7 @@ export class Course implements CourseInterface {
   creationDate: string;
   duration: number;
   description: string;
-  constructor(id: number, title: string, creationDate: string, duration: number, description: string) {
+  constructor(id: number, title: string, creationDate: any, duration: number, description: string) {
     this.id = id;
     this.title = title;
     this.creationDate = creationDate;

@@ -1,10 +1,10 @@
-<div *ngFor="let i of data" class="plate-wrapper space-between p-15 m-15">
+<div *ngFor="let i of data | orderBy:data" class="plate-wrapper space-between p-15 m-15">
   <div>
     <div class="space-between">
       <h3>{{i.title | uppercase}}</h3>
       <div class="space-between">
         <p>{{i.duration | duration}}</p>
-        <p class="m-left-15">{{i.creationDate}}</p>
+        <p class="m-left-15">{{i.creationDate | date }}</p>
       </div>
     </div>
     <p>{{i.description}}</p>
