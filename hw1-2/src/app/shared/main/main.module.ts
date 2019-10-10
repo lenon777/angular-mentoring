@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { DurationPipe } from 'src/app/utils/duration.pipe';
 import { OrderByPipe } from 'src/app/utils/order-by.pipe';
+import { BorderColorDirective } from 'src/app/utils/border-color.directive';
 
 @NgModule({
     declarations: [
@@ -19,7 +20,8 @@ import { OrderByPipe } from 'src/app/utils/order-by.pipe';
         SearchControlComponent,
         VideoCoursePlateComponent,
         DurationPipe,
-        OrderByPipe
+        OrderByPipe,
+        BorderColorDirective,
     ],
     imports: [
         CommonModule,

@@ -3,6 +3,7 @@
     <app-search-control></app-search-control>
     <app-add-course></app-add-course>
   </div>
+  <div *ngIf = "isListEmty" class="no-data-message">NO DATA, FEEL FREE TO ADD NEW COURSE</div>
   <div>
     <app-video-course-plate (myOutput)="valueFromChild($event)"></app-video-course-plate>
     <app-load-more></app-load-more>

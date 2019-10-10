@@ -10,18 +10,32 @@ import { DataService } from 'src/app/core/services/data.service';
 export class VideoCoursePlateComponent implements OnInit {
   @Output() public myOutput = new EventEmitter();
 
+
   constructor(private dataService: DataService) { }
   public data = this.dataService.data;
+  //public isListEmty: boolean = this.data.length === 0;
 
   deleteCourse(curerenCourse) {
-    this.myOutput.emit(curerenCourse);
+    this.myOutput.emit(this.data.length);
     this.data = this.data.filter((el) => el.id !== curerenCourse.id);
+  }
+  like(id) {
+    console.log(id);
+    this.data.forEach((el) => {
+     if(el.id === id) {
+       if(el.topRated) {
+        el.topRated = false;
+       } else {
+        el.topRated = true;
+       }
+       
+     }
+    })
   }
 
   public changeData(): void {
 
   }
-
   ngOnInit() {
   }
 

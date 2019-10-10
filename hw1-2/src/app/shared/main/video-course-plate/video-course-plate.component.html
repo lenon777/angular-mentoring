@@ -1,26 +1,38 @@
-<div *ngFor="let i of data | orderBy:data" class="plate-wrapper space-between p-15 m-15">
-  <div>
-    <div class="space-between">
-      <h3>{{i.title | uppercase}}</h3>
+<ng-container *ngFor="let course of data | orderBy: data">
+  <div [appBorderColor]="course" class="plate-wrapper space-between p-15 m-15">
+    <div>
       <div class="space-between">
-        <p>{{i.duration | duration}}</p>
-        <p class="m-left-15">{{i.creationDate | date }}</p>
+        <div class="inline">
+            <h3>{{course.title | uppercase}}</h3>
+            <div class="cursor" (click)="like(course.id)">
+                <i *ngIf="!course.topRated" class="material-icons">
+                    star_border
+                  </i>
+                  <i *ngIf="course.topRated" class="material-icons">
+                      star
+                      </i>
+            </div>           
+        </div>
+        <div class="space-between">
+          <p>{{course.duration | duration}}</p>
+          <p class="m-left-15">{{course.creationDate | date }}</p>
+        </div>
       </div>
+      <p>{{course.description}}</p>
     </div>
-    <p>{{i.description}}</p>
+    <div>
+      <button class="btn m-15">
+        <i class="material-icons">
+          mail_outline
+        </i>
+        <span class="m-left-15">Edit</span>
+      </button>
+      <button (click)="deleteCourse(course)" class="btn m-15">
+        <i class="material-icons">
+          mail_outline
+        </i>
+        <span class="m-left-15">Delete</span>
+      </button>
+    </div>
   </div>
-  <div>
-    <button class="btn m-15">
-      <i class="material-icons">
-        mail_outline
-      </i>
-      <span class="m-left-15">Edit</span>
-    </button>
-    <button (click)="deleteCourse(i)" class="btn m-15">
-      <i class="material-icons">
-        mail_outline
-      </i>
-      <span class="m-left-15">Delete</span>
-    </button>
-  </div>
-</div>
+</ng-container>

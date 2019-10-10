@@ -8,13 +8,14 @@ import { DataService } from 'src/app/core/services/data.service';
 })
 export class MainComponent implements OnInit {
   public idOfCourse: number;
+  public isListEmty: boolean;
 
   constructor(public dataService: DataService) {
     dataService.deleteCourse(this.idOfCourse)
    }
 
   valueFromChild($event) {
-    console.log($event.id)
+    this.isListEmty = $event === 1;
   }
   ngOnInit() {
   }
